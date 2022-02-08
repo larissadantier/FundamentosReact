@@ -46,11 +46,19 @@ function App() {
       },
     ]);
   }
-  
+
+  function handleRemove(postId) {
+    setPosts((prevState) =>
+      prevState.map((post) =>
+        post.id === postId ? { ...post, removed: true } : post
+      )
+    );
+  }
+
   return (
     <ThemeProvider>
       <Header>
-        <Title as="h2">
+        <Title as='h2'>
           Posts da semana
           <Button onClick={handleRefresh}>Atualizar</Button>
         </Title>

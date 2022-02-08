@@ -17,7 +17,6 @@ export default function PostHeader(props) {
 }
 
 PostHeader.propTypes = {
-  onRemove: PropTypes.func.isRequired,
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
