@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import Post from "./Post";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 import { Container } from "./styles";
-import Post from "./Post";
 
 import posts from "./posts";
 
 export default function PostsList() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <Container>
+    <Container theme={theme}>
       {posts.map((post) => (
         <Post key={post.id} title={post.title} description={post.description} />
       ))}
