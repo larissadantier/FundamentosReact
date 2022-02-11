@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import Layout from "./components/Layout";
-import { ThemeProvider, ThemeContext } from "./contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   return (
