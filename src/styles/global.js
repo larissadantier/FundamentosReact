@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
     body { 
         font-family: sans-serif;
-        background: #222;
-        color: #fff;
+        background: ${(props) => props.theme.backgroundColor};
+        color: ${(props) => props.theme.textColor};
     }
 `;
