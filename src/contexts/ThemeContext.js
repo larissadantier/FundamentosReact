@@ -1,4 +1,4 @@
-import React, { useState, useMemo, createContext } from "react";
+import React, { useState, useMemo, useEffect, createContext } from "react";
 import themes from "../styles/themes";
 
 export const ThemeContext = createContext("");
@@ -13,6 +13,7 @@ export function ThemeProvider({ children }) {
   function handleToggleTheme() {
     setTheme((prevState) => (prevState === "dark" ? "light" : "dark"));
   }
+
   return (
     <ThemeContext.Provider
       value={{
